@@ -1,7 +1,7 @@
 /* Colori principali */
 :root {
     --primary-color: #e7af3ff7; /* Colore per link e pulsanti */
-    --secondary-color: #e1e0de;  /* Colore per il testo */
+    --secondary-color: #333;  /* Colore per il testo */
     --background-color: #f9f9f9;
     --footer-background-color: #333;
     --footer-text-color: #fff;
@@ -44,7 +44,7 @@ header .nav-links a {
 
 header .nav-links a:hover {
     color: var(--primary-color); /* Colore al passaggio del mouse */
-    background-color: rgba(0, 0, 0, 0.1); /* Aggiunge un effetto hover */
+    background-color: #e1e0de; /* Aggiunge un effetto hover */
     border-radius: 5px;
 }
 
@@ -188,7 +188,7 @@ nav a:hover {
 
 /* Logo */
 .logo img {
-    height: 200px;
+    height: 150px;
     width: auto;
     align-items: center;
 }
