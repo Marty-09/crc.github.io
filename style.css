@@ -83,3 +83,16 @@ footer {
     color: white;
     margin-top: 30px;
 }
+
+nav a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: var(--secondary-color);
+    padding: 15px; /* Distanza testo e bordo del link */
+    font-size: 18px; /* Dimensione  testo */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color); 
+    background-color: rgba(0, 0, 0, 0.1);
+}
