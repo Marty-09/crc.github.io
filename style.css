@@ -1,6 +1,6 @@
 /* Colori principali */
 :root {
-    --primary-color: #757678d2; /* Colore per link e pulsanti */
+    --primary-color: #ffffff; /* Colore per link e pulsanti */
     --secondary-color: #333;  /* Colore per il testo */
     --background-color: #f9f9f9;
     --footer-background-color: #333;
@@ -127,7 +127,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #757678d2;  /* Colore di sfondo blu chiaro */
+    background-color: #e7af3ff7;  /* Colore di sfondo blu chiaro */
     color: white;
     text-align: center;
     padding: 80px 20px; 
