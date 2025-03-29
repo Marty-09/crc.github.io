@@ -1,23 +1,27 @@
+/* Aggiungi margini e padding di base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #222;
-    color: white;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 .nav-links {
@@ -26,21 +30,40 @@ nav {
     gap: 20px;
 }
 
-.nav-links li {
-    display: inline;
-}
-
 .nav-links a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.hero {
+/* Sezione principale */
+.hero, .content {
+    padding: 40px 20px;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
+}
+
+.hero {
+    background-color: #f9f9f9;
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
