@@ -1,7 +1,7 @@
 /* Colori principali */
 :root {
     --primary-color: #e7af3ff7; /* Colore per link e pulsanti */
-    --secondary-color: #333;  /* Colore per il testo */
+    --secondary-color: #e1e0de;  /* Colore per il testo */
     --background-color: #f9f9f9;
     --footer-background-color: #333;
     --footer-text-color: #fff;
@@ -188,7 +188,7 @@ nav a:hover {
 
 /* Logo */
 .logo img {
-    height: 50px;
+    height: 200px;
     width: auto;
     align-items: center;
 }
