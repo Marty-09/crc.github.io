@@ -1,13 +1,22 @@
+/* Impostiamo i colori principali */
+:root {
+    --primary-color: #007bff; /* Colore principale per i link e pulsanti */
+    --secondary-color: #333;  /* Colore per il testo */
+    --background-color: #f9f9f9; /* Colore di sfondo */
+    --footer-background-color: #333; /* Colore scuro per il footer */
+    --footer-text-color: #fff; /* Colore testo chiaro per il footer */
+}
+
 /* Stili di base */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 header {
-    background-color: #333;
+    background-color: var(--footer-background-color);
     color: white;
     padding: 15px 0;
     text-align: center;
@@ -27,6 +36,12 @@ header .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+header .nav-links a:hover {
+    color: var(--primary-color); /* Colore al passaggio del mouse */
+    background-color: rgba(0, 0, 0, 0.1); /* Aggiunge un effetto hover */
 }
 
 main {
@@ -63,13 +78,14 @@ main {
 }
 
 .contact button.submit-btn {
-    background-color: #333;
+    background-color: var(--footer-background-color);
     color: white;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .contact button.submit-btn:hover {
@@ -79,20 +95,21 @@ main {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
-    color: white;
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
     margin-top: 30px;
 }
 
+/* Stile per i link */
 nav a {
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    text-decoration: none;
     color: var(--secondary-color);
-    padding: 15px; /* Distanza testo e bordo del link */
-    font-size: 18px; /* Dimensione  testo */
+    padding: 15px;
+    font-size: 18px;
     transition: color 0.3s, background-color 0.3s;
 }
 
 nav a:hover {
-    color: var(--primary-color); 
+    color: var(--primary-color);
     background-color: rgba(0, 0, 0, 0.1);
 }
