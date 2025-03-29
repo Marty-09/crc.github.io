@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background-color: var(--footer-background-color);
+    background-color: #e1e0de;
     color: white;
     padding: 15px 0;
     text-align: center;
@@ -44,7 +44,7 @@ header .nav-links a {
 
 header .nav-links a:hover {
     color: var(--primary-color); /* Colore al passaggio del mouse */
-    background-color: #e1e0de; /* Aggiunge un effetto hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Aggiunge un effetto hover */
     border-radius: 5px;
 }
 
