@@ -185,3 +185,10 @@ nav a:hover {
         font-size: 1em;  /* Riduci la dimensione del testo del footer */
     }
 }
+
+/* Logo */
+.logo img {
+    height: 50px;
+    width: auto;
+    align-items: center;
+}
