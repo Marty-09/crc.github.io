@@ -1,10 +1,10 @@
 /* Colori principali */
 :root {
-    --primary-color: #007bff; /* Colore principale per i link e pulsanti */
+    --primary-color: #007bff; /* Colore per link e pulsanti */
     --secondary-color: #333;  /* Colore per il testo */
-    --background-color: #f9f9f9; /* Colore di sfondo */
-    --footer-background-color: #333; /* Colore scuro per il footer */
-    --footer-text-color: #fff; /* Colore testo chiaro per il footer */
+    --background-color: #f9f9f9;
+    --footer-background-color: #333;
+    --footer-text-color: #fff;
 }
 
 /* Stili di base */
@@ -98,10 +98,17 @@ main {
 
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 20px;
     background-color: var(--footer-background-color);
     color: var(--footer-text-color);
-    margin-top: 30px;
+    margin-top: 50px;
+    font-size: 0.9em;  /* Aumento della dimensione del font */
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.8;
 }
 
 /* Stile per i link */
@@ -116,4 +123,65 @@ nav a {
 nav a:hover {
     color: var(--primary-color);
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;  /* Colore di sfondo blu chiaro */
+    color: white;
+    text-align: center;
+    padding: 80px 20px; 
+    margin-bottom: 50px;  /* Distanza tra hero e altre sezioni */
+}
+
+.hero h1 {
+    font-size: 3em;  /* Aumento della dimensione del titolo */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;  /* Aumento della dimensione del paragrafo */
+}
+
+/* Content Section */
+.content {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 10px;  /* Bordo arrotondato */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Aggiungi un'ombra sottile */
+}
+
+.content p {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+    header .nav-links {
+        flex-direction: column;  /* I link si disporranno in colonna su schermi piccoli */
+    }
+
+    header .nav-links li {
+        margin: 10px 0;  /* Aggiungi più spazio tra i link */
+    }
+
+    .hero h1 {
+        font-size: 2em;  /* Riduci la dimensione del titolo */
+    }
+
+    .hero p {
+        font-size: 1.2em;  /* Riduci la dimensione del paragrafo */
+    }
+
+    .content {
+        padding: 30px 10px;  /* Aggiungi meno padding sui dispositivi mobili */
+    }
+
+    footer {
+        font-size: 1em;  /* Riduci la dimensione del testo del footer */
+    }
 }
