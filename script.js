@@ -5,15 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function revealOnScroll() {
         elements.forEach(element => {
-            const position = element.getBoundingClientRect().top;
-            const screenHeight = window.innerHeight;
-            
-            if (position < screenHeight - 50) {
-                element.classList.add('visible');
-            }
+            element.classList.add('visible');
         });
     }
 
-    window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll)
 });
