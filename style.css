@@ -42,13 +42,13 @@ header .nav-links a {
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 5px 10px;
 }
 
 header .nav-links a:hover {
     color: var(--primary-color);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    padding: 5px 10px;
 }
 
 /* HERO Section */
@@ -157,11 +157,12 @@ header .nav-links a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
 }
 
 .contact button.submit-btn:hover {
     background-color: #555;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
