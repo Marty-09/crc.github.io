@@ -15,6 +15,7 @@ body {
     background-color: var(--background-color);
 }
 
+/* HEADER */
 header {
     background-color: #e1e0de;
     color: white;
@@ -22,6 +23,7 @@ header {
     text-align: center;
 }
 
+/* Navbar */
 header .nav-links {
     list-style: none;
     padding: 0;
@@ -35,26 +37,92 @@ header .nav-links li {
 }
 
 header .nav-links a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s, background-color 0.3s;
     font-size: 18px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 header .nav-links a:hover {
-    color: var(--primary-color); /* Colore al passaggio del mouse */
-    background-color: rgba(0, 0, 0, 0.1); /* Aggiunge un effetto hover */
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    padding: 5px 10px;
 }
 
-main {
-    padding: 50px 10%;
+/* HERO Section */
+.hero {
+    background-color: #e7af3ff7;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 50px;
+}
+
+/* Animazione di entrata Hero */
+.hero h1, .hero p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LOGO */
+.logo img {
+    height: 150px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* CONTENT Section */
+.content {
+    padding: 50px 20px;
     background-color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Effetto di comparsa con scroll */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact Form */
+.contact {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.contact.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact h1 {
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -96,14 +164,15 @@ main {
     background-color: #555;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 10px 20px;
     background-color: var(--footer-background-color);
     color: var(--footer-text-color);
     margin-top: 50px;
-    font-size: 0.9em;  /* Aumento della dimensione del font */
-    border-top: 1px solid rgba(255, 255, 255, 0.2)
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer p {
@@ -111,84 +180,29 @@ footer p {
     opacity: 0.8;
 }
 
-/* Stile per i link */
-nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    padding: 15px;
-    font-size: 18px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-nav a:hover {
-    color: var(--primary-color);
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Hero Section */
-.hero {
-    background-color: #e7af3ff7;  /* Colore di sfondo blu chiaro */
-    color: white;
-    text-align: center;
-    padding: 80px 20px; 
-    margin-bottom: 50px;  /* Distanza tra hero e altre sezioni */
-}
-
-.hero h1 {
-    font-size: 3em;  /* Aumento della dimensione del titolo */
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5em;  /* Aumento della dimensione del paragrafo */
-}
-
-/* Content Section */
-.content {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-    margin-bottom: 50px;
-    border-radius: 10px;  /* Bordo arrotondato */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Aggiungi un'ombra sottile */
-}
-
-.content p {
-    font-size: 1.2em;
-    color: var(--secondary-color);
-    line-height: 1.6;
-}
-
 /* Media Query per dispositivi mobili */
 @media (max-width: 768px) {
     header .nav-links {
-        flex-direction: column;  /* I link si disporranno in colonna su schermi piccoli */
+        flex-direction: column;
     }
 
     header .nav-links li {
-        margin: 10px 0;  /* Aggiungi più spazio tra i link */
+        margin: 10px 0;
     }
 
     .hero h1 {
-        font-size: 2em;  /* Riduci la dimensione del titolo */
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 1.2em;  /* Riduci la dimensione del paragrafo */
+        font-size: 1.2em;
     }
 
     .content {
-        padding: 30px 10px;  /* Aggiungi meno padding sui dispositivi mobili */
+        padding: 30px 10px;
     }
 
     footer {
-        font-size: 1em;  /* Riduci la dimensione del testo del footer */
+        font-size: 1em;
     }
-}
-
-/* Logo */
-.logo img {
-    height: 150px;
-    width: auto;
-    align-items: center;
 }
